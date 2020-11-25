@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>17BCE0343 CSE3002 DA-2</title>
+        <style> 
+            #myDIV {
+              border: 1px solid black;
+              width: 3000px;
+              height: 1500px;
+              background: url('smiley.png') no-repeat;
+            }
+            </style>
+    </head>
+    <body>
+        <script>
+            function myFunction() {
+                document.body.style.backgroundColor = "red";
+                document.getElementById("myDIV").style.backgroundRepeat = "repeat-x";
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                var yyyy = today.getFullYear();
+                today = "Today's Date: " + dd + '/' + mm + '/' + yyyy;
+                alert(today);
+            }
+
+            function myFunction2() {
+                document.getElementById("heading").innerHTML = "You don't want to see magic?";
+                alert("No changes in the web page");
+            }
+        </script>
+
+        <h1 id="heading">DOM</h1>
+        <p>Tap Yes for Magic!</p>
+        <form>
+            <button onclick="myFunction()">Yes</button>
+            <button onclick="myFunction2()">No</button>
+        </form>
+
+        <div id="myDIV"></div>
+    </body>
+</html>
